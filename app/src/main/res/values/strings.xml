@@ -1,0 +1,35 @@
+<resources>
+    <string-array name="items">
+        <item>Login/SignUp</item>
+        <item>Plants</item>
+        <item>Garden Tools</item>
+        <item>Garden Foods</item>
+        <item>Garden Designer</item>
+    </string-array>
+
+    <string name="app_name">LifePlant</string>
+    <string name="enteremail">Enter Email Id</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="firstname">Enter First Name</string>
+    <string name="lastname">Enter Last Name</string>
+    <string name="enter_bith_date_here">Enter Bith date here</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_tree">HOME TREE</string>
+    <string name="category_name">Category name</string>
+    <string name="see_all">See All</string>
+    <string name="textview">TextView</string>
+    <string name="search">Search</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

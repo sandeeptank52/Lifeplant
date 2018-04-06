@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="secondtheme" parent="android:Theme.Material.Dialog.Alert" />
+
+    <style name="Theme.secondtheme" parent="android:Theme.Material" />
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/pop1">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tIfname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/firstname"
+            android:id="@+id/first_name"
+
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tIlname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tIfname">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lastname"
+            android:id="@+id/lastname"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender  :"
+            android:textSize="@dimen/twenty"
+            android:id="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@id/tIlname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogp"
+            app:layout_constraintTop_toBottomOf="@id/tIlname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/male"
+                android:checked="false"
+                android:textSize="15sp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:checked="false"
+                android:id="@+id/female"
+                android:textSize="15sp"
+                />
+        </RadioGroup>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tImonub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/radiogp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile number"
+            android:inputType="phone"
+            android:id="@+id/mobileno"
+            />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tIemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tImonub">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/emailid"
+            android:layout_height="wrap_content"
+            android:hint="@string/enteremail"
+            android:inputType="textEmailAddress"
+            />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tipassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tIemail"
+            app:passwordToggleEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/enter_password"
+            android:id="@+id/password"
+           />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ticpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/tipassword">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/tipassword"
+            android:id="@+id/confirm_password"
+            android:hint="@string/confirm_password"/>
+        </android.support.design.widget.TextInputLayout>
+        <requestFocus/>
+        <ImageButton
+            android:id="@+id/date_button"
+            android:layout_width="77dp"
+            android:layout_height="67dp"
+            android:autofillHints="Click here to Enter Birthdate"
+            android:src="@drawable/ic_action_date"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticpassword" />
+
+        <TextView
+            android:id="@+id/enterbirthdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_bith_date_here"
+            android:inputType="date"
+            android:padding="@dimen/twenty"
+            android:textSize="19sp"
+            app:layout_constraintLeft_toRightOf="@+id/date_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticpassword" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:padding="@dimen/twenty"
+            android:id="@+id/submit_button"
+            android:layout_marginTop="@dimen/ten"
+            app:layout_constraintTop_toBottomOf="@id/enterbirthdate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.736" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/submit_button"
+            app:layout_constraintTop_toBottomOf="@id/enterbirthdate"
+            android:text="Reset"
+            android:id="@+id/reset_button"
+            android:padding="@dimen/twenty"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="53dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tipassword"
+            android:id="@+id/iamid"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/error"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
